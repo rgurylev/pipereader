@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>datasource/Oracle.properties</value>
+		</property>
+	</bean>
+
+	<bean id="dataSource"
+		 class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+
+	<bean id="pipereader" class="pipereader.model.PipeReader">
+		<constructor-arg index="0" ref="dataSource"/>
+		<property name="type" value="TYPE1"/>
+		<property name="query" value="query2.sql"/>
+	</bean>
+
+	<bean id="mainwindow" class="pipereader.mainwindow">
+	</bean>
+
+</beans>

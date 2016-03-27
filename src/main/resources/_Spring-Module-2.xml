@@ -1,0 +1,4 @@
+	<bean id="pipereader" class="pipereader.model.PipeReader">
+		<constructor-arg index="0" ref="dataSource"/>
+		<constructor-arg index="1" value="TYPE1"/>
+	</bean>

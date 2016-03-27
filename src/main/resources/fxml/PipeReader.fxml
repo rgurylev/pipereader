@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pipereader.controller.PipeReaderController">
+  <children>
+      <HBox layoutX="266.0" layoutY="353.0" spacing="5.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="44.0">
+         <children>
+            <TextField fx:id="txtPipeName" />
+            <Button id="btnAdd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#startWriting" text="Add" />
+            <Button id="btnDel" mnemonicParsing="false" onMouseClicked="#stopWriting" text="Del" />
+         </children>
+      </HBox>
+      <TextArea id="txtLog" layoutX="54.0" layoutY="71.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+  </children>
+</AnchorPane>
